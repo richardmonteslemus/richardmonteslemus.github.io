@@ -3,20 +3,23 @@ project:
   output-dir: docs
 
 website:
-  title: "richardmonteslemus.github.io"
+  title: "Richard Montes Lemus"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
       - about.qmd
+      - href: resources.qmd
+        text: Resources
 
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      light: lumen
+      dark: dark
     css: styles.css
     toc: true
+    page-layout: full
 
 
 
