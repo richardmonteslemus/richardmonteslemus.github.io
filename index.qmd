@@ -1,6 +1,7 @@
 ---
 title: "Richard Montes Lemus"
 image: "IMG_5438.JPG"
+toc: false
 about:
   template: trestles
   image-shape: rounded
@@ -13,7 +14,7 @@ about:
       href: https://github.com/richardmonteslemus
       target: _blank
     - text: Email
-      href: mailto:richardmonteslemus@bren.ucsb.edu
+      href: mailto:richardmonteslemus@ucsb.edu
 ---
 
 My passion lies at the intersection of machine learning and conservation. I strive for a harmonious blend between technology and nature in everything I do. Whether it be using machine learning to monitor mammals in the channel islands to applying a physics based model that removed the water from underwater reef images in order to be able to more easily use machine learning for quantifying coral bleaching from reef images. 
