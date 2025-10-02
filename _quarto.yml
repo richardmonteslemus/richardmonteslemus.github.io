@@ -8,15 +8,15 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - about.qmd
-      - href: resources.qmd
-        text: Resources
+      # - about.qmd
+      # - href: resources.qmd
+        # text: Resources
 
 format:
   html:
     theme:
       light: lumen
-      dark: dark
+      dark: darkly
     css: styles.css
     toc: true
     page-layout: full
