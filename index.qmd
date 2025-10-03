@@ -14,7 +14,7 @@ about:
       href: https://github.com/richardmonteslemus
       target: _blank
     - text: Email
-      href: mailto:richardmonteslemus@ucsb.edu
+      href: mailto:richardmonteslemus@bren.ucsb.edu
 ---
 Welcome! I’m Richie Montes Lemus.
 
