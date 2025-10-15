@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "All of my favorite resources",
+    "section": "",
+    "text": "this is an h1 element\n\nthis is an h1 element with the title class\n\n\nthis paragraph is orange\n\n\nthis text is centered\n\n\nthis text is both centered and orange\n\n\nHeres where I’m describing something fun that I enjoy doing.\nHeres a full line\nHeres one line\nHeres another line :::\n\nsomething centered"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Richard Montes Lemus",
@@ -11,6 +18,20 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Here’s where I describe what I do professionally"
+  },
+  {
+    "objectID": "about.html#what-i-do-for-work",
+    "href": "about.html#what-i-do-for-work",
+    "title": "About",
+    "section": "",
+    "text": "Here’s where I describe what I do professionally"
+  },
+  {
+    "objectID": "about.html#what-i-do-for-fun",
+    "href": "about.html#what-i-do-for-fun",
+    "title": "About",
+    "section": "What I do for fun",
+    "text": "What I do for fun\nHike!"
   }
 ]

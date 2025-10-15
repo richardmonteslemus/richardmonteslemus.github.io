@@ -8,12 +8,15 @@ about:
   image-width: 17em
   links: 
     - text: LinkedIn
+      icon: linkedin
       href: https://www.linkedin.com/in/richard-montes-lemus-142a421b6/
       target: _blank
     - text: Github
+      icon: github
       href: https://github.com/richardmonteslemus
       target: _blank
     - text: Email
+      icon: envelope
       href: mailto:richardmonteslemus@bren.ucsb.edu
 ---
 Welcome! I’m Richie Montes Lemus.
