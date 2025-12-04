@@ -1,10 +1,9 @@
 ---
-title: "Richard Montes Lemus"
-image: "headshot.jpeg"
+# title: "Richard Montes Lemus"
+image: "headshot.jpg"
 toc: false
 about:
   template: jolla
-  # image-shape: rounded
   image-width: 17em
   links: 
     - text: LinkedIn

@@ -6,12 +6,12 @@ website:
   title: "Richard Montes Lemus"
   favicon: images/logo.jpg
   navbar:
-    logo: images/logo.jpg
+    logo: images/logo.png
     logo-alt: the name richie montes lemus with a logo
     right:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - posts.qmd
       # - href: resources.qmd
         # text: Resources
       # - icon: github
