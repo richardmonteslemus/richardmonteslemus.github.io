@@ -14,10 +14,24 @@
     "text": "Welcome! I’m Richie Montes Lemus.\nMy passion lies at the intersection of machine learning and conservation. I strive for a harmonious blend between technology and nature in everything I do. Some of my major projects have involved machine learning for monitoring the Island Spotted Skunk and applying underwater colorimetry models to reef images in order to improve coral bleaching quantification.\nOutside of research, I love trying different teas, hiking, and browsing Trader Joe’s. I graduated from the University of California Santa Barbara (UCSB) with a B.S. in Environmental Studies and am currently pursuing my Master’s in Environmental Data Science at UCSB’s Bren School."
   },
   {
+    "objectID": "posts/my-first-blog-post/index.html",
+    "href": "posts/my-first-blog-post/index.html",
+    "title": "My first blog post!",
+    "section": "",
+    "text": "This is where the body of my blog post begins! I’m going to add a footnote here1 Here’s an inline footnote2\nLets cite a paper using its DOI"
+  },
+  {
+    "objectID": "posts/my-first-blog-post/index.html#footnotes",
+    "href": "posts/my-first-blog-post/index.html#footnotes",
+    "title": "My first blog post!",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nHere is some additional context that might be helpful.↩︎\nhere’s my inline note↩︎"
+  },
+  {
     "objectID": "posts.html",
     "href": "posts.html",
     "title": "Blog Posts",
     "section": "",
-    "text": "No matching items"
+    "text": "My first blog post!\n\n\n\nMEDS\n\nR\n\nDATA-VIZ\n\n\n\na short description of this blog post\n\n\n\nRichard Montes Lemus\n\n\nNov 12, 2025\n\n\n\n\n\n\nNo matching items"
   }
 ]
