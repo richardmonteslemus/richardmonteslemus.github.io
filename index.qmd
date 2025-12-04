@@ -3,7 +3,7 @@
 image: "headshot.jpg"
 toc: false
 about:
-  template: jolla
+  template: trestles
   image-width: 17em
   links: 
     - text: LinkedIn
@@ -18,8 +18,10 @@ about:
       icon: envelope
       href: mailto:richardmonteslemus@bren.ucsb.edu
 ---
-Welcome! I’m Richie Montes Lemus.
+# Welcome!
 
-My passion lies at the intersection of machine learning and conservation. I strive for a harmonious blend between technology and nature in everything I do. Some of my major projects have involved machine learning for monitoring the Island Spotted Skunk and applying underwater colorimetry models to reef images in order to improve coral bleaching quantification.
+I’m Richie Montes Lemus.
 
-Outside of research, I love trying different teas, hiking, and browsing Trader Joe’s. I graduated from the University of California Santa Barbara (UCSB) with a B.S. in Environmental Studies and am currently pursuing my Master’s in Environmental Data Science at UCSB’s Bren School.
+An environmental data scientist who spends alot of time exploring how machine learning can revolutionize conservation efforts. I strive for a harmonious blend between technology and nature in everything I do! 
+
+I graduated from the University of California Santa Barbara (UCSB) with a B.S. in Environmental Studies and am currently pursuing my Master’s in Environmental Data Science at UCSB’s Bren School.
