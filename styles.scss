@@ -1,0 +1,52 @@
+/*-- scss:defaults --*/
+
+//import gogole fonts 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+//fonts
+$josefin:"Josefin Sans", san-serif;
+
+//color
+$dark-green:#757B50;
+$terracotta:#E2725B;
+$cream:#FFFDD0;
+$pastel-green:#b3cf99;
+
+
+//define quarto variables
+$body-bg: $pastel-green;
+$navbar-bg: $cream;
+$navbar-fg: $dark-green;
+$navbar-hl: $terracotta;
+$link-color: $terracotta;
+
+/*-- scss:rules --*/
+
+h1, h2, h3, h4 {
+  font-family: josefin;
+}
+
+.navbar-brand img {
+  max-height: 40px;
+  width: auto;
+}
+
+h1, h2 {
+  letter-spacing: 5px;
+  font-weight: 700;
+}
+
+.title {
+  color: black;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.orange-text {
+  color: orange;
+}
+
+
+

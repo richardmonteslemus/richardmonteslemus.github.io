@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "All of my favorite resources",
+    "section": "",
+    "text": "this is an h1 element\n\nthis is an h1 element with the title class\n\n\nthis paragraph is orange\n\n\nthis text is centered\n\n\nthis text is both centered and orange\n\n\nHeres where I’m describing something fun that I enjoy doing.\nHeres a full line\nHeres one line\nHeres another line :::\n\nsomething centered"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Richard Montes Lemus",
@@ -7,10 +14,10 @@
     "text": "Welcome! I’m Richie Montes Lemus.\nMy passion lies at the intersection of machine learning and conservation. I strive for a harmonious blend between technology and nature in everything I do. Some of my major projects have involved machine learning for monitoring the Island Spotted Skunk and applying underwater colorimetry models to reef images in order to improve coral bleaching quantification.\nOutside of research, I love trying different teas, hiking, and browsing Trader Joe’s. I graduated from the University of California Santa Barbara (UCSB) with a B.S. in Environmental Studies and am currently pursuing my Master’s in Environmental Data Science at UCSB’s Bren School."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Blog Posts",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "No matching items"
   }
 ]

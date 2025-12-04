@@ -4,22 +4,28 @@ project:
 
 website:
   title: "Richard Montes Lemus"
+  favicon: images/logo.jpg
   navbar:
+    logo: images/logo.png
+    logo-alt: the name richie montes lemus with a logo
     right:
       - href: index.qmd
         text: Home
-      # - about.qmd
+      - posts.qmd
       # - href: resources.qmd
         # text: Resources
+      # - icon: github
+        # href: https://github.com/richardmonteslemus
+  page-footer:
+        left: Copyright 2025, Richie Montes Lemus
 
 format:
   html:
-    theme:
-      light: lumen
-      dark: darkly
-    css: styles.css
+    theme: styles.scss
     toc: true
     page-layout: full
+    mainfont: Nunito
+    
 
 
 
