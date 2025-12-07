@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Richard Montes Lemus">
+<meta name="dcterms.date" content="2025-12-06">
+<meta name="description" content="Identify optimal West Coast locations for oyster and California spiny lobster aquaculture based on sea surface temperature and depth data.">
 
-<title>Blog Posts – Richard Montes Lemus</title>
+<title>Mapping West Coast EEZ Aquaculture Suitability – Richard Montes Lemus</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,30 +23,48 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/logo.jpg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f69baa509362005033c4e796f1084a2f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/logo.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f69baa509362005033c4e796f1084a2f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,80 +92,22 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/logo.png" alt="the name richie montes lemus with a logo" class="navbar-logo light-content">
-    <img src="./images/logo.png" alt="the name richie montes lemus with a logo" class="navbar-logo dark-content">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/logo.png" alt="the name richie montes lemus with a logo" class="navbar-logo light-content">
+    <img src="../../images/logo.png" alt="the name richie montes lemus with a logo" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Richard Montes Lemus</span>
     </a>
   </div>
@@ -155,11 +118,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" aria-current="page"> 
+    <a class="nav-link" href="../../posts.html"> 
 <span class="menu-text">Blog Posts</span></a>
   </li>  
 </ul>
@@ -170,214 +133,251 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Mapping West Coast EEZ Aquaculture Suitability</h1>
+                  <div>
+        <div class="description">
+          Identify optimal West Coast locations for oyster and California spiny lobster aquaculture based on sea surface temperature and depth data.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">Geospatial Analysis</div>
+                <div class="quarto-category">Marine Aquaculture</div>
+                <div class="quarto-category">Sustainability</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Richard Montes Lemus </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 6, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="REFUQS1WSVo=">DATA-VIZ <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2Vvc3BhdGlhbCUyMEFuYWx5c2lz">Geospatial Analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWFyaW5lJTIwQXF1YWN1bHR1cmU=">Marine Aquaculture <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TUVEUw==">MEDS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cG9saWN5JTIwYW5hbHlzaXM=">policy analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(4)</span></div><div class="category" data-category="cmVncmVzc2lvbg==">regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVtb3RlJTIwU2Vuc2luZw==">Remote Sensing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3VzdGFpbmFiaWxpdHk=">Sustainability <span class="quarto-category-count">(2)</span></div><div class="category" data-category="d2F0ZXIlMjByZXNvdXJjZXM=">water resources <span class="quarto-category-count">(1)</span></div><div class="category" data-category="V2lsZGZpcmVz">Wildfires <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sustainable-protein-production-challenges" id="toc-sustainable-protein-production-challenges" class="nav-link active" data-scroll-target="#sustainable-protein-production-challenges">Sustainable Protein Production Challenges</a>
+  <ul class="collapse">
+  <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question">Research Question</a></li>
+  </ul></li>
+  <li><a href="#data-methods" id="toc-data-methods" class="nav-link" data-scroll-target="#data-methods">Data &amp; Methods</a>
+  <ul class="collapse">
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a></li>
+  <li><a href="#species-requirements" id="toc-species-requirements" class="nav-link" data-scroll-target="#species-requirements">Species Requirements</a></li>
+  <li><a href="#analytical-approach" id="toc-analytical-approach" class="nav-link" data-scroll-target="#analytical-approach">Analytical Approach</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#oyster-aquaculture-suitability" id="toc-oyster-aquaculture-suitability" class="nav-link" data-scroll-target="#oyster-aquaculture-suitability">Oyster Aquaculture Suitability</a></li>
+  <li><a href="#california-spiny-lobster-suitability" id="toc-california-spiny-lobster-suitability" class="nav-link" data-scroll-target="#california-spiny-lobster-suitability">California Spiny Lobster Suitability</a></li>
+  </ul></li>
+  <li><a href="#discussion-implications" id="toc-discussion-implications" class="nav-link" data-scroll-target="#discussion-implications">Discussion &amp; Implications</a>
+  <ul class="collapse">
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a>
+  <ul class="collapse">
+  <li><a href="#data-sources-1" id="toc-data-sources-1" class="nav-link" data-scroll-target="#data-sources-1">Data Sources</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Blog Posts</h1>
-</div>
-
-
-
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
 
+<p><a href="https://github.com/richardmonteslemus/eds-223-westcoast-eez">View Full Analysis on GitHub</a></p>
+<hr>
+<section id="sustainable-protein-production-challenges" class="level2">
+<h2 class="anchored" data-anchor-id="sustainable-protein-production-challenges">Sustainable Protein Production Challenges</h2>
+<p>With the global population approaching 10 bilion by 2050, protein demand has continuously risen. Terrestial livestock has increased to meet this demand - degrading the environment in the process. Marine aquaculture, however, offers a attractive solution to this problem. It is associated with lower carbon emissions, reduced freshwater use, and minimal land use compared to terrestrial livestock <span class="citation" data-cites="Gephart2021">(<a href="#ref-Gephart2021" role="doc-biblioref">Gephart et al. 2021</a>)</span>.</p>
+<p>Implementing this alternative requires finding locations with specific temperature, depth, and other environmental factors needed for particular marine species. Finding these optimal zones with spatial analysis would encourage sustainable aquaculture within Exclusive Economic Zone (EEZ) like the U.S’s West coast.</p>
+<section id="research-question" class="level3">
+<h3 class="anchored" data-anchor-id="research-question">Research Question</h3>
+<p><strong>Where are the most suitable locations along the U.S. West Coast for cultivating oysters and California spiny lobsters?</strong></p>
+<p>This analysis uses sea surface temperature data and ocean depth to produce a map containing optimal environmental conditions for these two commercially valuable species.</p>
+</section>
+</section>
+<section id="data-methods" class="level2">
+<h2 class="anchored" data-anchor-id="data-methods">Data &amp; Methods</h2>
+<section id="data-sources" class="level3">
+<h3 class="anchored" data-anchor-id="data-sources">Data Sources</h3>
+<p>This analysis uses the following datasets:</p>
+<ol type="1">
+<li><strong>Sea Surface Temperature (SST)</strong>: Average annual temperature data (2008-2012) from NOAA Coral Reef Watch, providing a five-year baseline to capture climate variability</li>
+<li><strong>Ocean Depth</strong>: Bathymetry data from the GEBCO 2022 Grid</li>
+<li><strong>EEZ Boundaries</strong>: West Coast Exclusive Economic Zone boundaries from the Flanders Marine Institute</li>
+</ol>
+</section>
+<section id="species-requirements" class="level3">
+<h3 class="anchored" data-anchor-id="species-requirements">Species Requirements</h3>
+<p>Based on the species-specific biological research from SeaLifeBase <span class="citation" data-cites="Palomares2025">(<a href="#ref-Palomares2025" role="doc-biblioref">Palomares and Pauly 2025</a>)</span>, I found the following optimal conditions for my species of interest.</p>
+<p><strong>Oysters:</strong> - Depth: 0 to -70 meters - Temperature: 11°C to 30°C</p>
+<p><strong>California Spiny Lobster:</strong> - Depth: 0 to -150 meters<br>
+- Temperature: 14.8°C to 22.3°C</p>
+</section>
+<section id="analytical-approach" class="level3">
+<h3 class="anchored" data-anchor-id="analytical-approach">Analytical Approach</h3>
+<p>The analysis workflow involved:</p>
+<ol type="1">
+<li><strong>Data preparation</strong>: Transforming coordinate reference systems to match spatial extents and resolutions across all datasets</li>
+<li><strong>Temperature processing</strong>: Calculating mean SST (2008-2012) and converting from Kelvin to Celsius</li>
+<li><strong>Finding suitable areas</strong>: Reclassifying temperature and depth rasters to identify suitable areas (binary: suitable = 1, unsuitable = 0)</li>
+<li><strong>Area calculation</strong>: Calculating suitable area (km²) within each EEZ region using zonal statistics</li>
+</ol>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="oyster-aquaculture-suitability" class="level3">
+<h3 class="anchored" data-anchor-id="oyster-aquaculture-suitability">Oyster Aquaculture Suitability</h3>
+<p>The analysis finds the most suitable EEZs for oyster aquaculture across the U.S. West Coast:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Oyster Aquaculture Suitable Area per EEZ Region</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">EEZ Region</th>
+<th style="text-align: right;">Suitable Area (km²)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Central California</td>
+<td style="text-align: right;">4,373.5565</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Northern California</td>
+<td style="text-align: right;">323.9124</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oregon</td>
+<td style="text-align: right;">1,395.7328</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Southern California</td>
+<td style="text-align: right;">3,329.9002</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Washington</td>
+<td style="text-align: right;">3,091.5158</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>Central California</strong> is found to be the most suitable region for oyster aquaculture since it contains the largest area of optimal conditions.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="westcoast-eez_files/figure-html/oyster-map-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption>West Coast EEZ regions colored by suitable oyster aquaculture area (km²). Darker green indicates larger suitable areas.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="california-spiny-lobster-suitability" class="level3">
+<h3 class="anchored" data-anchor-id="california-spiny-lobster-suitability">California Spiny Lobster Suitability</h3>
+<p>The analysis finds the most suitable EEZs for California spiny lobster aquaculture across the U.S. West Coast:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="westcoast-eez_files/figure-html/lobster-map-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption>West Coast EEZ regions colored by suitable California spiny lobster aquaculture area (km²). The warmer waters of Southern California provide optimal habitat.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Southern California</strong> is found to be the most suitable region for California spiny lobster aquaculture since it contains the largest area of optimal conditions - warmer waters and appropriate depth profiles.</p>
+</section>
+</section>
+<section id="discussion-implications" class="level2">
+<h2 class="anchored" data-anchor-id="discussion-implications">Discussion &amp; Implications</h2>
+<section id="key-findings" class="level3">
+<h3 class="anchored" data-anchor-id="key-findings">Key Findings</h3>
+<p>This spatial analysis maps potential aquaculture EEZs for Oyster and California spiny lobster.</p>
+<ul>
+<li><strong>Central California</strong> is optimal for oyster cultivation, with moderate temperatures and shallow coastal waters</li>
+<li><strong>Southern California</strong> is best suited for California spiny lobster, with warmer waters and appropriate depths</li>
+</ul>
+</section>
+<section id="limitations" class="level3">
+<h3 class="anchored" data-anchor-id="limitations">Limitations</h3>
+<p>The followint limitation should be considered:</p>
+<ol type="1">
+<li><strong>Simplified environmental criteria</strong>: This analysis only considers temperature and depth. Additional factors should be considered in order to find more accurate optimal zones.</li>
+</ol>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>Given the increasing demand for protein and depleted wild fisheries, marine aquaculture offers a sustainable pathway <span class="citation" data-cites="FAO2020">(<a href="#ref-FAO2020" role="doc-biblioref">FAO 2020</a>)</span>. Spatial tools like this analysis can help guide development in appropriate exclusive economic zones. <span class="citation" data-cites="Gentry2017">(<a href="#ref-Gentry2017" role="doc-biblioref">Gentry et al. 2017</a>)</span>.</p>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-FAO2020" class="csl-entry" role="listitem">
+FAO. 2020. <span>“The State of World Fisheries and Aquaculture 2020: Sustainability in Action.”</span> Rome: Food; Agriculture Organization of the United Nations. <a href="https://www.fao.org/state-of-fisheries-aquaculture">https://www.fao.org/state-of-fisheries-aquaculture</a>.
+</div>
+<div id="ref-Gentry2017" class="csl-entry" role="listitem">
+Gentry, Rebecca R, Halley E Froehlich, Dietmar Grimm, Peter Kareiva, Michael Parke, Michael Rust, Steven D Gaines, and Benjamin S Halpern. 2017. <span>“Mapping the Global Potential for Marine Aquaculture.”</span> <em>Nature Ecology &amp; Evolution</em> 1 (9): 1317–24.
+</div>
+<div id="ref-Gephart2021" class="csl-entry" role="listitem">
+Gephart, Jessica A, Patrik JG Henriksson, Robert WR Parker, Alon Shepon, Kelvin D Gorospe, Kathryn Bergman, Gidon Eshel, et al. 2021. <span>“Environmental Performance of Blue Foods.”</span> <em>Nature</em> 597 (7876): 360–65.
+</div>
+<div id="ref-Palomares2025" class="csl-entry" role="listitem">
+Palomares, M. L. D., and D. Pauly. 2025. <span>“SeaLifeBase.”</span> World Wide Web electronic publication. <a href="https://www.sealifebase.org">www.sealifebase.org</a>.
+</div>
+</div>
+<section id="data-sources-1" class="level3">
+<h3 class="anchored" data-anchor-id="data-sources-1">Data Sources</h3>
+<p><strong>West Coast Exclusive Economic Zones</strong><br>
+Flanders Marine Institute (2023). Maritime Boundaries Geodatabase: United States West Coast Exclusive Economic Zones, version 12. Available online at https://www.marineregions.org/. https://doi.org/10.14284/632</p>
+<p><strong>Depth</strong><br>
+GEBCO Compilation Group (2022) GEBCO_2022 Grid (doi:10.5285/e0f0bb80-ab44-2739-e053-6c86abc0289c).</p>
+<p><strong>Sea Surface Temperature</strong><br>
+NOAA Coral Reef Watch. 2008-2012. NOAA Coral Reef Watch Average Annual Sea Surface Temperature Product. College Park, Maryland, USA: NOAA Coral Reef Watch. Data set accessed November 30, 2025 at https://coralreefwatch.noaa.gov.</p>
+<p><strong>Species Suitable Depth and Temperature</strong><br>
+Palomares, M.L.D. and D. Pauly. Editors. 2025. SeaLifeBase. World Wide Web electronic publication. www.sealifebase.org, version (04/2025).</p>
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="UiUyQ0dlb3NwYXRpYWwlMjBBbmFseXNpcyUyQ01hcmluZSUyMEFxdWFjdWx0dXJlJTJDU3VzdGFpbmFiaWxpdHk=" data-listing-date-sort="1765008000000" data-listing-file-modified-sort="1765093102500" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1801">
-<a href="./posts/westcoast_eez/westcoast-eez.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/westcoast_eez/oyster.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Mapping West Coast EEZ Aquaculture Suitability
-</h5>
-<div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+</section>
+</section>
 
-<div class="listing-category" onclick="window.quartoListingCategory('R2Vvc3BhdGlhbCUyMEFuYWx5c2lz'); return false;">Geospatial Analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWFyaW5lJTIwQXF1YWN1bHR1cmU='); return false;">Marine Aquaculture</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3VzdGFpbmFiaWxpdHk='); return false;">Sustainability</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Identify optimal West Coast locations for oyster and California spiny lobster aquaculture based on sea surface temperature and depth data.</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Richard Montes Lemus
-</div>
-<div class="listing-date">
-Dec 6, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="UiUyQ0dlb3NwYXRpYWwlMjBBbmFseXNpcyUyQ01hcmluZSUyMEFxdWFjdWx0dXJlJTJDU3VzdGFpbmFiaWxpdHk=" data-listing-date-sort="1765008000000" data-listing-file-modified-sort="1765092883073" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1788">
-<a href="./posts/westcoast_eez/westcoast-eez-blog.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/westcoast_eez/oyster.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Mapping West Coast EEZ Aquaculture Suitability
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2Vvc3BhdGlhbCUyMEFuYWx5c2lz'); return false;">Geospatial Analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWFyaW5lJTIwQXF1YWN1bHR1cmU='); return false;">Marine Aquaculture</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3VzdGFpbmFiaWxpdHk='); return false;">Sustainability</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Identify optimal West Coast locations for oyster and California spiny lobster aquaculture based on sea surface temperature and depth data.</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Richard Montes Lemus
-</div>
-<div class="listing-date">
-Dec 6, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="UHl0aG9uJTJDUmVtb3RlJTIwU2Vuc2luZyUyQ1dpbGRmaXJlcw==" data-listing-date-sort="1764748800000" data-listing-file-modified-sort="1764970395180" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="648">
-<a href="./posts/eaton-palisades-fires-analysis/eaton-palisades-fires-analysis.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/eaton-palisades-fires-analysis/eaton_pal.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Eaton and Palisades False Color Imagery
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVtb3RlJTIwU2Vuc2luZw=='); return false;">Remote Sensing</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2lsZGZpcmVz'); return false;">Wildfires</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>False color imagery visualization of the Eaton and Palisades fires aftermath.</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Richard Montes Lemus
-</div>
-<div class="listing-date">
-Dec 3, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="TUVEUyUyQ1IlMkNEQVRBLVZJWg==" data-listing-date-sort="1762934400000" data-listing-file-modified-sort="1764820100264" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="40">
-<a href="./posts/my-first-blog-post/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/my-first-blog-post/download.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-My first blog post!
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TUVEUw=='); return false;">MEDS</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('REFUQS1WSVo='); return false;">DATA-VIZ</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>a short description of this blog post</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Richard Montes Lemus
-</div>
-<div class="listing-date">
-Nov 12, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="d2F0ZXIlMjByZXNvdXJjZXMlMkNwb2xpY3klMjBhbmFseXNpcyUyQ1IlMkNyZWdyZXNzaW9u" data-listing-date-sort="1733385600000" data-listing-file-modified-sort="1764969994668" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1752">
-<a href="./posts/cal_sgma_analysis/Cal_SGMA.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/cal_sgma_analysis/groundwater.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Evaluating California’s Sustainable Groundwater Management Act
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('d2F0ZXIlMjByZXNvdXJjZXM='); return false;">water resources</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cG9saWN5JTIwYW5hbHlzaXM='); return false;">policy analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVncmVzc2lvbg=='); return false;">regression</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Using segmented regression to analyze groundwater level trends before and after SGMA implementation</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Richard Montes Lemus
-</div>
-<div class="listing-date">
-Dec 5, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -2,6 +2,8 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/westcoast_eez/westcoast-eez.html",
+      "/posts/westcoast_eez/westcoast-eez-blog.html",
       "/posts/eaton-palisades-fires-analysis/eaton-palisades-fires-analysis.html",
       "/posts/my-first-blog-post/index.html",
       "/posts/cal_sgma_analysis/Cal_SGMA.html"
