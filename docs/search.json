@@ -95,6 +95,20 @@
     "href": "posts.html",
     "title": "Blog Posts",
     "section": "",
-    "text": "Mapping West Coast EEZ Aquaculture Suitability\n\n\n\nR\n\nGeospatial Analysis\n\nMarine Aquaculture\n\nSustainability\n\n\n\nIdentify optimal West Coast locations for oyster and California spiny lobster aquaculture based on sea surface temperature and depth data.\n\n\n\nRichard Montes Lemus\n\n\nDec 6, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nEaton and Palisades False Color Imagery\n\n\n\nPython\n\nRemote Sensing\n\nWildfires\n\n\n\nFalse color imagery visualization of the Eaton and Palisades fires aftermath.\n\n\n\nRichard Montes Lemus\n\n\nDec 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy first blog post!\n\n\n\nMEDS\n\nR\n\nDATA-VIZ\n\n\n\na short description of this blog post\n\n\n\nRichard Montes Lemus\n\n\nNov 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nEvaluating California’s Sustainable Groundwater Management Act\n\n\n\nwater resources\n\npolicy analysis\n\nR\n\nregression\n\n\n\nUsing segmented regression to analyze groundwater level trends before and after SGMA implementation\n\n\n\nRichard Montes Lemus\n\n\nDec 5, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Mapping West Coast EEZ Aquaculture Suitability\n\n\n\nR\n\nGeospatial Analysis\n\nMarine Aquaculture\n\nSustainability\n\n\n\nIdentify optimal West Coast locations for oyster and California spiny lobster aquaculture based on sea surface temperature and depth data.\n\n\n\nRichard Montes Lemus\n\n\nDec 6, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nEaton and Palisades False Color Imagery\n\n\n\nPython\n\nRemote Sensing\n\nWildfires\n\n\n\nFalse color imagery visualization of the Eaton and Palisades fires aftermath.\n\n\n\nRichard Montes Lemus\n\n\nDec 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nEvaluating California’s Sustainable Groundwater Management Act\n\n\n\nwater resources\n\npolicy analysis\n\nR\n\nregression\n\n\n\nUsing segmented regression to analyze groundwater level trends before and after SGMA implementation\n\n\n\nRichard Montes Lemus\n\n\nDec 5, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "archive/my-first-blog-post/index.html",
+    "href": "archive/my-first-blog-post/index.html",
+    "title": "My first blog post!",
+    "section": "",
+    "text": "This is where the body of my blog post begins! I’m going to add a footnote here1 Here’s an inline footnote2\nLets cite a paper using its DOI"
+  },
+  {
+    "objectID": "archive/my-first-blog-post/index.html#footnotes",
+    "href": "archive/my-first-blog-post/index.html#footnotes",
+    "title": "My first blog post!",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nHere is some additional context that might be helpful.↩︎\nhere’s my inline note↩︎"
   }
 ]
