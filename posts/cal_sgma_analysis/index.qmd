@@ -2,7 +2,7 @@
 title: "Evaluating California's Sustainable Groundwater Management Act"
 description: "Using segmented regression to analyze groundwater level trends before and after SGMA implementation"
 author: "Richard Montes Lemus"
-date: "2024-12-05"
+date: "2025-12-12"
 categories: [water resources, policy analysis, R, regression]
 image: "groundwater.png"
 draft: false
