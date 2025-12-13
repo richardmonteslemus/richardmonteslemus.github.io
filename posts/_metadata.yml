@@ -1,9 +1,0 @@
-# any options specified here will apply to all posts in the posts/ folder 
-author: 
-  - name: Richard Montes Lemus 
-    affiliation: The Bren School of Environmental Science and Management
-    affiliation-url: https://bren.ucsb.edu/
-    
-title-block-banner: true
-
-freeze: auto
