@@ -18,9 +18,9 @@ bibliography: references.bib
 
 ## Sustainable Protein Production Challenges
 
-With the global population approaching 10 bilion by 2050, protein demand has continuously risen. Terrestial livestock has increased to meet this demand - degrading the environment in the process. Marine aquaculture, however, offers a attractive solution to this problem. It is associated with lower carbon emissions, reduced freshwater use, and minimal land use compared to terrestrial livestock [@Gephart2021].
+With the global population approaching 10 billion by 2050, protein demand has continuously risen. Terrestrial livestock has increased to meet this demand - degrading the environment in the process. Marine aquaculture, however, offers a attractive solution to this problem. It is associated with lower carbon emissions, reduced freshwater use, and minimal land use compared to terrestrial livestock [@Gephart2021].
 
-Implementing this alternative requires finding locations with specific temperature, depth, and other environmental factors needed for particular marine species. Finding these optimal zones with spatial analysis would encourage sustainable aquaculture within Exclusive Economic Zone (EEZ) like the U.S's West coast.
+Implementing this alternative requires finding locations with specific temperature, depth, and other environmental factors needed for particular marine species. Finding these optimal zones with spatial analysis would encourage sustainable aquaculture within an Exclusive Economic Zone (EEZ) like the U.S's West coast. Exclusive Economic Zones are maritime zones extending up to 200 nautical miles from a country's coastline, a country has special rights to the exploration and use of marine resources in this zone.  
 
 ### Research Question
 
@@ -34,27 +34,35 @@ This analysis uses sea surface temperature data and ocean depth to produce a map
 
 This analysis uses the following datasets:
 
-1.  **Sea Surface Temperature (SST)**: Average annual temperature data (2008-2012) from NOAA Coral Reef Watch, providing a five-year baseline to capture climate variability
-2.  **Ocean Depth**: Bathymetry data from the GEBCO 2022 Grid
-3.  **EEZ Boundaries**: West Coast Exclusive Economic Zone boundaries from the Flanders Marine Institute
+1.  **Sea Surface Temperature (SST)**: Average annual temperature raster tiff data (2008-2012) from NOAA Coral Reef Watch, providing a five-year baseline to capture climate variability
+2.  **Ocean Depth**: Bathymetry raster data from the GEBCO 2022 Grid
+3.  **EEZ Boundaries**: West Coast Exclusive Economic Zone boundary shapefiles from the Flanders Marine Institute
 
 ### Species Requirements
 
 Based on the species-specific biological research from SeaLifeBase [@Palomares2025], I found the following optimal conditions for my species of interest.
 
-**Oysters:** - Depth: 0 to -70 meters - Temperature: 11°C to 30°C
+**Oysters:**
 
-**California Spiny Lobster:** - Depth: 0 to -150 meters\
+- Depth: 0 to -70 meters 
+
+- Temperature: 11°C to 30°C
+
+**California Spiny Lobster:** 
+
+- Depth: 0 to -150 meters
+
 - Temperature: 14.8°C to 22.3°C
 
 ### Analytical Approach
 
 The analysis workflow involved:
 
-1.  **Data preparation**: Transforming coordinate reference systems to match spatial extents and resolutions across all datasets
-2.  **Temperature processing**: Calculating mean SST (2008-2012) and converting from Kelvin to Celsius
-3.  **Finding suitable areas**: Reclassifying temperature and depth rasters to identify suitable areas (binary: suitable = 1, unsuitable = 0)
-4.  **Area calculation**: Calculating suitable area (km²) within each EEZ region using zonal statistics
+1.  **Data preparation**: Transforming coordinate reference systems to match spatial extents and resolutions across all datasets. This will alllow us to conduct zonal statistics between them and plot them on a map together.
+2.  **Temperature processing**: Calculating mean sea surface temperature (SST) (2008-2012) and converting from Kelvin to Celsius. This ensures we have a robust SST informed by the historical temperatures of the area and is in a temperature people are familar with. 
+3.  **Finding suitable areas**: Reclassifying temperature and depth rasters to identify suitable areas (binary: suitable = 1, unsuitable = 0). This returns a raster that only meets our suitability condition.
+4.  **Area calculation**: Calculating suitable area (km²) within each EEZ region using zonal statistics. This allows us to quantify how suitable each EEZ is based on area of suitability. 
+5. **Create Function**: Creating a function that takes in minimum sea surface temperature,  maximum sea surface temperature, minimum sea depth, maximum sea depth, and species name to create a map that colors each exclusive economic zone on the US west coast by suitable area quantity in km^2. This makes the workflow generalizable.
 
 ```{r setup, message=FALSE, echo=FALSE}
 # Load libraries
@@ -150,7 +158,7 @@ kable(suitable_oyster_region,
 
 **Central California** is found to be the most suitable region for oyster aquaculture since it contains the largest area of optimal conditions.
 
-```{r oyster-map, echo=FALSE, message=FALSE, warning=FALSE, fig.width=8, fig.height=10, fig.cap="West Coast EEZ regions colored by suitable oyster aquaculture area (km²). Darker green indicates larger suitable areas."}
+```{r oyster-map, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4, fig.cap="West Coast EEZ regions colored by suitable oyster aquaculture area (km²). Darker green indicates larger suitable areas."}
 tm_shape(eez_oyster) +
   tm_polygons(fill = "area_km_2",
         fill.scale = tm_scale_continuous(values = "brewer.greens"), 
@@ -160,9 +168,9 @@ tm_shape(eez_oyster) +
   tm_compass(position = c(0.3, 0.35)) + 
   tm_title(text = "Oyster Aquaculture Suitability") +
   tm_layout(asp = 1.8,
-            legend.title.size = 0.8, 
+            legend.title.size = 0.7, 
             legend.text.size = 0.5,   
-            legend.width = 10,       
+            legend.width = 13,       
             legend.height = 15,
             title.position = c(0.05, 1.08), 
             frame = FALSE)
@@ -215,9 +223,9 @@ eez_map <- function(min_sst, max_sst, min_depth, max_depth, species_name){
     tm_compass(position = c(0.3, 0.35)) + 
     tm_title(text = paste(species_name, "Aquaculture Suitability")) +
     tm_layout(asp = 1.8,
-              legend.title.size = 0.8, 
+              legend.title.size = 0.7, 
               legend.text.size = 0.5,   
-              legend.width = 10,       
+              legend.width = 13,       
               legend.height = 15,
               title.position = c(0.05, 1.08), 
               frame = FALSE)
@@ -226,7 +234,7 @@ eez_map <- function(min_sst, max_sst, min_depth, max_depth, species_name){
 }
 ```
 
-```{r lobster-map, echo=FALSE, message=FALSE, warning=FALSE, fig.width=8, fig.height=10, fig.cap="West Coast EEZ regions colored by suitable California spiny lobster aquaculture area (km²). The warmer waters of Southern California provide optimal habitat."}
+```{r lobster-map, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4, fig.cap="West Coast EEZ regions colored by suitable California spiny lobster aquaculture area (km²). The warmer waters of Southern California provide optimal habitat."}
 eez_map(14.8, 22.3, 0, -150, "California Spiny Lobster")
 ```
 
