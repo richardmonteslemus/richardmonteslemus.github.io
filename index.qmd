@@ -1,0 +1,27 @@
+---
+# title: "Richard Montes Lemus"
+image: "headshot.jpg"
+toc: false
+about:
+  template: trestles
+  image-width: 17em
+  links: 
+    - text: LinkedIn
+      icon: linkedin
+      href: https://www.linkedin.com/in/richard-montes-lemus-142a421b6/
+      target: _blank
+    - text: Github
+      icon: github
+      href: https://github.com/richardmonteslemus
+      target: _blank
+    - text: Email
+      icon: envelope
+      href: mailto:richardmonteslemus@bren.ucsb.edu
+---
+# Welcome!
+
+I’m Richie Montes Lemus.
+
+An environmental data scientist who spends alot of time exploring how machine learning can revolutionize conservation efforts. I strive for a harmonious blend between technology and nature in everything I do! 
+
+I graduated from the University of California Santa Barbara (UCSB) with a B.S. in Environmental Studies and am currently pursuing my Master’s in Environmental Data Science at UCSB’s Bren School.

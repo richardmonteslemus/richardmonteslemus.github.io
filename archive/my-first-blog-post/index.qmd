@@ -1,0 +1,22 @@
+---
+title: "My first blog post!"
+description: "a short description of this blog post"
+author: 
+  - name: Richard Montes Lemus 
+    affiliation: The Bren School of Environmental Science and Management
+    affiliation-url: https://bren.ucsb.edu/
+date: 2025-11-12
+categories: [MEDS, R, DATA-VIZ]
+image: download.png
+citation:
+  url: https://richardmonteslemus.github.io/posts/my-first-blog-post
+draft-mode: linked
+---
+
+This is where the body of my blog post begins! I'm going to add a footnote here[^1] Here's an inline footnote[^2]
+
+[^1]: Here is some additional context that might be helpful.
+
+[^2]: here's my inline note
+
+Lets cite a paper using its DOI
