@@ -2,10 +2,9 @@
   {
     "listing": "/posts.html",
     "items": [
-      "/posts/westcoast_eez/index.html",
-      "/posts/westcoast_eez/westcoast-eez.html",
-      "/posts/eaton-palisades-fires-analysis/eaton-palisades-fires-analysis.html",
-      "/posts/cal_sgma_analysis/index.html"
+      "/posts/eaton-palisades-fires-analysis/eaton-palisades-fire-analysis.html",
+      "/posts/cal_sgma_analysis/index.html",
+      "/posts/westcoast_eez/index.html"
     ]
   }
 ]

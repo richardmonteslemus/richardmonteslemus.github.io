@@ -219,8 +219,8 @@ div.csl-indent {
 <hr>
 <section id="sustainable-protein-production-challenges" class="level2">
 <h2 class="anchored" data-anchor-id="sustainable-protein-production-challenges">Sustainable Protein Production Challenges</h2>
-<p>With the global population approaching 10 bilion by 2050, protein demand has continuously risen. Terrestial livestock has increased to meet this demand - degrading the environment in the process. Marine aquaculture, however, offers a attractive solution to this problem. It is associated with lower carbon emissions, reduced freshwater use, and minimal land use compared to terrestrial livestock <span class="citation" data-cites="Gephart2021">(<a href="#ref-Gephart2021" role="doc-biblioref">Gephart et al. 2021</a>)</span>.</p>
-<p>Implementing this alternative requires finding locations with specific temperature, depth, and other environmental factors needed for particular marine species. Finding these optimal zones with spatial analysis would encourage sustainable aquaculture within Exclusive Economic Zone (EEZ) like the U.S’s West coast.</p>
+<p>With the global population approaching 10 billion by 2050, protein demand has continuously risen. Terrestrial livestock has increased to meet this demand - degrading the environment in the process. Marine aquaculture, however, offers a attractive solution to this problem. It is associated with lower carbon emissions, reduced freshwater use, and minimal land use compared to terrestrial livestock <span class="citation" data-cites="Gephart2021">(<a href="#ref-Gephart2021" role="doc-biblioref">Gephart et al. 2021</a>)</span>.</p>
+<p>Implementing this alternative requires finding locations with specific temperature, depth, and other environmental factors needed for particular marine species. Finding these optimal zones with spatial analysis would encourage sustainable aquaculture within an Exclusive Economic Zone (EEZ) like the U.S’s West coast. Exclusive Economic Zones are maritime zones extending up to 200 nautical miles from a country’s coastline, a country has special rights to the exploration and use of marine resources in this zone.</p>
 <section id="research-question" class="level3">
 <h3 class="anchored" data-anchor-id="research-question">Research Question</h3>
 <p><strong>Where are the most suitable locations along the U.S. West Coast for cultivating oysters and California spiny lobsters?</strong></p>
@@ -233,17 +233,24 @@ div.csl-indent {
 <h3 class="anchored" data-anchor-id="data-sources">Data Sources</h3>
 <p>This analysis uses the following datasets:</p>
 <ol type="1">
-<li><strong>Sea Surface Temperature (SST)</strong>: Average annual temperature data (2008-2012) from NOAA Coral Reef Watch, providing a five-year baseline to capture climate variability</li>
-<li><strong>Ocean Depth</strong>: Bathymetry data from the GEBCO 2022 Grid</li>
-<li><strong>EEZ Boundaries</strong>: West Coast Exclusive Economic Zone boundaries from the Flanders Marine Institute</li>
+<li><strong>Sea Surface Temperature (SST)</strong>: Average annual temperature raster tiff data (2008-2012) from NOAA Coral Reef Watch, providing a five-year baseline to capture climate variability</li>
+<li><strong>Ocean Depth</strong>: Bathymetry raster data from the GEBCO 2022 Grid</li>
+<li><strong>EEZ Boundaries</strong>: West Coast Exclusive Economic Zone boundary shapefiles from the Flanders Marine Institute</li>
 </ol>
 </section>
 <section id="species-requirements" class="level3">
 <h3 class="anchored" data-anchor-id="species-requirements">Species Requirements</h3>
 <p>Based on the species-specific biological research from SeaLifeBase <span class="citation" data-cites="Palomares2025">(<a href="#ref-Palomares2025" role="doc-biblioref">Palomares and Pauly 2025</a>)</span>, I found the following optimal conditions for my species of interest.</p>
-<p><strong>Oysters:</strong> - Depth: 0 to -70 meters - Temperature: 11°C to 30°C</p>
-<p><strong>California Spiny Lobster:</strong> - Depth: 0 to -150 meters<br>
-- Temperature: 14.8°C to 22.3°C</p>
+<p><strong>Oysters:</strong></p>
+<ul>
+<li><p>Depth: 0 to -70 meters</p></li>
+<li><p>Temperature: 11°C to 30°C</p></li>
+</ul>
+<p><strong>California Spiny Lobster:</strong></p>
+<ul>
+<li><p>Depth: 0 to -150 meters</p></li>
+<li><p>Temperature: 14.8°C to 22.3°C</p></li>
+</ul>
 </section>
 <section id="analytical-approach" class="level3">
 <h3 class="anchored" data-anchor-id="analytical-approach">Analytical Approach</h3>
@@ -253,6 +260,7 @@ div.csl-indent {
 <li><strong>Temperature processing</strong>: Calculating mean SST (2008-2012) and converting from Kelvin to Celsius</li>
 <li><strong>Finding suitable areas</strong>: Reclassifying temperature and depth rasters to identify suitable areas (binary: suitable = 1, unsuitable = 0)</li>
 <li><strong>Area calculation</strong>: Calculating suitable area (km²) within each EEZ region using zonal statistics</li>
+<li><strong>Create Function</strong>: Creating a function that takes in minimum sea surface temperature, maximum sea surface temperature, minimum sea depth, maximum sea depth, and species name to create a map that colors each exclusive economic zone on the US west coast by suitable area quantity in km^2. This makes the workflow generalizable.</li>
 </ol>
 </section>
 </section>
@@ -301,7 +309,7 @@ div.csl-indent {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/oyster-map-1.png" class="img-fluid figure-img" width="768"></p>
+<p><img src="index_files/figure-html/oyster-map-1.png" class="img-fluid figure-img" width="576"></p>
 <figcaption>West Coast EEZ regions colored by suitable oyster aquaculture area (km²). Darker green indicates larger suitable areas.</figcaption>
 </figure>
 </div>
@@ -315,7 +323,7 @@ div.csl-indent {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/lobster-map-1.png" class="img-fluid figure-img" width="768"></p>
+<p><img src="index_files/figure-html/lobster-map-1.png" class="img-fluid figure-img" width="576"></p>
 <figcaption>West Coast EEZ regions colored by suitable California spiny lobster aquaculture area (km²). The warmer waters of Southern California provide optimal habitat.</figcaption>
 </figure>
 </div>
