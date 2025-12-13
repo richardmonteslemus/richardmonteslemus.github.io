@@ -12,7 +12,7 @@ format:
 bibliography: references.bib
 ---
 
-[View Full Analysis on GitHub](https://github.com/richardmonteslemus/eds-223-westcoast-eez)
+[View Repository on GitHub](https://github.com/richardmonteslemus/eds-223-westcoast-eez)
 
 ------------------------------------------------------------------------
 
