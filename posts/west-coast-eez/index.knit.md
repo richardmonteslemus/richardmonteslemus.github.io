@@ -5,8 +5,6 @@ description: "Identify optimal West Coast locations for oyster and California sp
 date: "2025-12-06"
 categories: [R, Geospatial Analysis, Marine Aquaculture, Sustainability]
 image: "oyster.png"
-warning: false
-message: false
 format:
   html:
     code-fold: true
@@ -66,20 +64,103 @@ The analysis workflow involved:
 4.  **Area calculation**: Calculating suitable area (km²) within each EEZ region using zonal statistics. This allows us to quantify how suitable each EEZ is based on area of suitability. 
 5. **Create Function**: Creating a function that takes in minimum sea surface temperature,  maximum sea surface temperature, minimum sea depth, maximum sea depth, and species name to create a map that colors each exclusive economic zone on the US west coast by suitable area quantity in km^2. This makes the workflow generalizable.
 
-```{r message=FALSE}
-#| output: false
-#| message: false
 
-# Load in necessary libraries
+::: {.cell}
+
+```{.r .cell-code}
+# | message: false
+# Load libraries
 library(tidyverse)
+```
+
+::: {.cell-output .cell-output-stderr}
+
+```
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.2     ✔ tibble    3.3.0
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.1.0     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+```
+
+
+:::
+
+```{.r .cell-code}
 library(terra)
+```
+
+::: {.cell-output .cell-output-stderr}
+
+```
+terra 1.8.60
+
+Attaching package: 'terra'
+
+The following object is masked from 'package:tidyr':
+
+    extract
+```
+
+
+:::
+
+```{.r .cell-code}
 library(here)
+```
+
+::: {.cell-output .cell-output-stderr}
+
+```
+here() starts at /Users/richardmonteslemus/Documents/git/personal/richardmonteslemus.github.io
+```
+
+
+:::
+
+```{.r .cell-code}
 library(sf)
+```
+
+::: {.cell-output .cell-output-stderr}
+
+```
+Linking to GEOS 3.13.0, GDAL 3.8.5, PROJ 9.5.1; sf_use_s2() is TRUE
+```
+
+
+:::
+
+```{.r .cell-code}
 library(tmap)
 library(knitr)
 ```
 
-```{r}
+::: {.cell-output .cell-output-stderr}
+
+```
+
+Attaching package: 'knitr'
+
+The following object is masked from 'package:terra':
+
+    spin
+```
+
+
+:::
+:::
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
 # Create raster objects for sea surface temperature
 sst_2008 <- rast(here("posts", "west-coast-eez", "data", "average_annual_sst_2008.tif"))
 sst_2009 <- rast(here("posts", "west-coast-eez", "data", "average_annual_sst_2009.tif"))
@@ -108,8 +189,13 @@ sst_avg_c <- sst_avg - 273.15
 depth_cropped <- crop(depth, sst_avg_c)
 depth_resample <- resample(depth_cropped, sst_avg_c, method = "near")
 ```
+:::
 
-```{r}
+
+
+::: {.cell}
+
+```{.r .cell-code}
 # Create matrix with oyster depth limits
 depth_rcl <- matrix(c(-Inf, -70, 0,
                       -70, 0, 1, 
@@ -147,6 +233,8 @@ names(suitable_oyster_region)[2] <- "area_km_2"
 # Join to EEZ shapefile
 eez_oyster <- left_join(x = eez, y = suitable_oyster_region, by = "rgn")
 ```
+:::
+
 
 ## Results
 
@@ -154,16 +242,40 @@ eez_oyster <- left_join(x = eez, y = suitable_oyster_region, by = "rgn")
 
 The analysis finds the most suitable EEZs for oyster aquaculture across the U.S. West Coast:
 
-```{r}
+
+::: {.cell}
+
+```{.r .cell-code}
 kable(suitable_oyster_region, 
       col.names = c("EEZ Region", "Suitable Area (km²)"),
       caption = "Oyster Aquaculture Suitable Area per EEZ Region",
       format.args = list(big.mark = ","))
 ```
 
+::: {.cell-output-display}
+
+
+Table: Oyster Aquaculture Suitable Area per EEZ Region
+
+|EEZ Region          | Suitable Area (km²)|
+|:-------------------|-------------------:|
+|Central California  |          4,373.5565|
+|Northern California |            323.9124|
+|Oregon              |          1,395.7328|
+|Southern California |          3,329.9002|
+|Washington          |          3,091.5158|
+
+
+:::
+:::
+
+
 **Central California** is found to be the most suitable region for oyster aquaculture since it contains the largest area of optimal conditions.
 
-```{r fig.width=6, fig.height=4, fig.cap="West Coast EEZ regions colored by suitable oyster aquaculture area (km²). Darker green indicates larger suitable areas."}
+
+::: {.cell}
+
+```{.r .cell-code}
 tm_shape(eez_oyster) +
   tm_polygons(fill = "area_km_2",
         fill.scale = tm_scale_continuous(values = "brewer.greens"), 
@@ -181,11 +293,20 @@ tm_shape(eez_oyster) +
             frame = FALSE)
 ```
 
+::: {.cell-output-display}
+![West Coast EEZ regions colored by suitable oyster aquaculture area (km²). Darker green indicates larger suitable areas.](index_files/figure-html/unnamed-chunk-5-1.png){width=576}
+:::
+:::
+
+
 ### California Spiny Lobster Suitability
 
 The analysis finds the most suitable EEZs for California spiny lobster aquaculture across the U.S. West Coast:
 
-```{r}
+
+::: {.cell}
+
+```{.r .cell-code}
 # Generalized function for species suitability
 eez_map <- function(min_sst, max_sst, min_depth, max_depth, species_name){
   
@@ -238,10 +359,21 @@ eez_map <- function(min_sst, max_sst, min_depth, max_depth, species_name){
   return(map)
 }
 ```
+:::
 
-```{r fig.width=6, fig.height=4, fig.cap="West Coast EEZ regions colored by suitable California spiny lobster aquaculture area (km²). The warmer waters of Southern California provide optimal habitat."}
+
+
+::: {.cell}
+
+```{.r .cell-code}
 eez_map(14.8, 22.3, 0, -150, "California Spiny Lobster")
 ```
+
+::: {.cell-output-display}
+![West Coast EEZ regions colored by suitable California spiny lobster aquaculture area (km²). The warmer waters of Southern California provide optimal habitat.](index_files/figure-html/unnamed-chunk-7-1.png){width=576}
+:::
+:::
+
 
 **Southern California** is found to be the most suitable region for California spiny lobster aquaculture since it contains the largest area of optimal conditions - warmer waters and appropriate depth profiles.
 
@@ -282,3 +414,4 @@ NOAA Coral Reef Watch. 2008-2012. NOAA Coral Reef Watch Average Annual Sea Surfa
 
 **Species Suitable Depth and Temperature**\
 Palomares, M.L.D. and D. Pauly. Editors. 2025. SeaLifeBase. World Wide Web electronic publication. www.sealifebase.org, version (04/2025).
+
