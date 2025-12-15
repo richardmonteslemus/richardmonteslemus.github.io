@@ -64,7 +64,8 @@ The analysis workflow involved:
 4.  **Area calculation**: Calculating suitable area (km²) within each EEZ region using zonal statistics. This allows us to quantify how suitable each EEZ is based on area of suitability. 
 5. **Create Function**: Creating a function that takes in minimum sea surface temperature,  maximum sea surface temperature, minimum sea depth, maximum sea depth, and species name to create a map that colors each exclusive economic zone on the US west coast by suitable area quantity in km^2. This makes the workflow generalizable.
 
-```{r setup, message=FALSE, echo=FALSE}
+```{r}
+#| message: false
 # Load libraries
 library(tidyverse)
 library(terra)
@@ -74,7 +75,7 @@ library(tmap)
 library(knitr)
 ```
 
-```{r data-prep, echo=FALSE, message=FALSE, warning=FALSE}
+```{r}
 # Create raster objects for sea surface temperature
 sst_2008 <- rast(here("posts", "westcoast_eez", "data", "average_annual_sst_2008.tif"))
 sst_2009 <- rast(here("posts", "westcoast_eez", "data", "average_annual_sst_2009.tif"))
@@ -104,7 +105,7 @@ depth_cropped <- crop(depth, sst_avg_c)
 depth_resample <- resample(depth_cropped, sst_avg_c, method = "near")
 ```
 
-```{r oyster-analysis, echo=FALSE, message=FALSE, warning=FALSE}
+```{r}
 # Create matrix with oyster depth limits
 depth_rcl <- matrix(c(-Inf, -70, 0,
                       -70, 0, 1, 
@@ -149,7 +150,7 @@ eez_oyster <- left_join(x = eez, y = suitable_oyster_region, by = "rgn")
 
 The analysis finds the most suitable EEZs for oyster aquaculture across the U.S. West Coast:
 
-```{r oyster-table, echo=FALSE}
+```{r}
 kable(suitable_oyster_region, 
       col.names = c("EEZ Region", "Suitable Area (km²)"),
       caption = "Oyster Aquaculture Suitable Area per EEZ Region",
@@ -158,7 +159,7 @@ kable(suitable_oyster_region,
 
 **Central California** is found to be the most suitable region for oyster aquaculture since it contains the largest area of optimal conditions.
 
-```{r oyster-map, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4, fig.cap="West Coast EEZ regions colored by suitable oyster aquaculture area (km²). Darker green indicates larger suitable areas."}
+```{r fig.width=6, fig.height=4, fig.cap="West Coast EEZ regions colored by suitable oyster aquaculture area (km²). Darker green indicates larger suitable areas."}
 tm_shape(eez_oyster) +
   tm_polygons(fill = "area_km_2",
         fill.scale = tm_scale_continuous(values = "brewer.greens"), 
@@ -180,7 +181,7 @@ tm_shape(eez_oyster) +
 
 The analysis finds the most suitable EEZs for California spiny lobster aquaculture across the U.S. West Coast:
 
-```{r lobster-function, echo=FALSE, message=FALSE, warning=FALSE}
+```{r}
 # Generalized function for species suitability
 eez_map <- function(min_sst, max_sst, min_depth, max_depth, species_name){
   
@@ -234,7 +235,7 @@ eez_map <- function(min_sst, max_sst, min_depth, max_depth, species_name){
 }
 ```
 
-```{r lobster-map, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4, fig.cap="West Coast EEZ regions colored by suitable California spiny lobster aquaculture area (km²). The warmer waters of Southern California provide optimal habitat."}
+```{r fig.width=6, fig.height=4, fig.cap="West Coast EEZ regions colored by suitable California spiny lobster aquaculture area (km²). The warmer waters of Southern California provide optimal habitat."}
 eez_map(14.8, 22.3, 0, -150, "California Spiny Lobster")
 ```
 
