@@ -254,7 +254,7 @@ div.csl-indent {
 <hr>
 <section id="sustainable-protein-production-challenges" class="level2">
 <h2 class="anchored" data-anchor-id="sustainable-protein-production-challenges">Sustainable Protein Production Challenges</h2>
-<p>With the global population approaching 10 billion by 2050, protein demand has continuously risen. Terrestrial livestock has increased to meet this demand - degrading the environment in the process. Marine aquaculture, however, offers a attractive solution to this problem. It is associated with lower carbon emissions, reduced freshwater use, and minimal land use compared to terrestrial livestock <span class="citation" data-cites="Gephart2021">(<a href="#ref-Gephart2021" role="doc-biblioref">Gephart et al. 2021</a>)</span>.</p>
+<p>With the global population approaching 10 billion by 2050, protein demand has continuously risen. Terrestrial livestock has increased to meet this demand - degrading the environment in the process. Marine aquaculture, however, offers an attractive solution to this problem. It is associated with lower carbon emissions, reduced freshwater use, and minimal land use compared to terrestrial livestock <span class="citation" data-cites="Gephart2021">(<a href="#ref-Gephart2021" role="doc-biblioref">Gephart et al. 2021</a>)</span>.</p>
 <p>Implementing this alternative requires finding locations with specific temperature, depth, and other environmental factors needed for particular marine species. Finding these optimal zones with spatial analysis would encourage sustainable aquaculture within an Exclusive Economic Zone (EEZ) like the U.S’s West coast. Exclusive Economic Zones are maritime zones extending up to 200 nautical miles from a country’s coastline, a country has special rights to the exploration and use of marine resources in this zone.</p>
 <section id="research-question" class="level3">
 <h3 class="anchored" data-anchor-id="research-question">Research Question</h3>
@@ -291,8 +291,8 @@ div.csl-indent {
 <h3 class="anchored" data-anchor-id="analytical-approach">Analytical Approach</h3>
 <p>The analysis workflow involved:</p>
 <ol type="1">
-<li><strong>Data preparation</strong>: Transforming coordinate reference systems to match spatial extents and resolutions across all datasets. This will alllow us to conduct zonal statistics between them and plot them on a map together.</li>
-<li><strong>Temperature processing</strong>: Calculating mean sea surface temperature (SST) (2008-2012) and converting from Kelvin to Celsius. This ensures we have a robust SST informed by the historical temperatures of the area and is in a temperature people are familar with.</li>
+<li><strong>Data preparation</strong>: Transforming coordinate reference systems to match spatial extents and resolutions across all datasets. This will allow us to conduct zonal statistics between them and plot them on a map together.</li>
+<li><strong>Temperature processing</strong>: Calculating mean sea surface temperature (SST) (2008-2012) and converting from Kelvin to Celsius. This ensures we have a robust SST informed by the historical temperatures of the area and is in a temperature people are familiar with.</li>
 <li><strong>Finding suitable areas</strong>: Reclassifying temperature and depth rasters to identify suitable areas (binary: suitable = 1, unsuitable = 0). This returns a raster that only meets our suitability condition.</li>
 <li><strong>Area calculation</strong>: Calculating suitable area (km²) within each EEZ region using zonal statistics. This allows us to quantify how suitable each EEZ is based on area of suitability.</li>
 <li><strong>Create Function</strong>: Creating a function that takes in minimum sea surface temperature, maximum sea surface temperature, minimum sea depth, maximum sea depth, and species name to create a map that colors each exclusive economic zone on the US west coast by suitable area quantity in km^2. This makes the workflow generalizable.</li>
@@ -549,7 +549,7 @@ div.csl-indent {
 </section>
 <section id="limitations" class="level3">
 <h3 class="anchored" data-anchor-id="limitations">Limitations</h3>
-<p>The followint limitation should be considered:</p>
+<p>The following limitation should be considered:</p>
 <ol type="1">
 <li><strong>Simplified environmental criteria</strong>: This analysis only considers temperature and depth. Additional factors should be considered in order to find more accurate optimal zones.</li>
 </ol>

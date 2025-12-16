@@ -20,7 +20,7 @@ bibliography: references.bib
 
 ## Sustainable Protein Production Challenges
 
-With the global population approaching 10 billion by 2050, protein demand has continuously risen. Terrestrial livestock has increased to meet this demand - degrading the environment in the process. Marine aquaculture, however, offers a attractive solution to this problem. It is associated with lower carbon emissions, reduced freshwater use, and minimal land use compared to terrestrial livestock [@Gephart2021].
+With the global population approaching 10 billion by 2050, protein demand has continuously risen. Terrestrial livestock has increased to meet this demand - degrading the environment in the process. Marine aquaculture, however, offers an attractive solution to this problem. It is associated with lower carbon emissions, reduced freshwater use, and minimal land use compared to terrestrial livestock [@Gephart2021].
 
 Implementing this alternative requires finding locations with specific temperature, depth, and other environmental factors needed for particular marine species. Finding these optimal zones with spatial analysis would encourage sustainable aquaculture within an Exclusive Economic Zone (EEZ) like the U.S's West coast. Exclusive Economic Zones are maritime zones extending up to 200 nautical miles from a country's coastline, a country has special rights to the exploration and use of marine resources in this zone.  
 
@@ -60,8 +60,8 @@ Based on the species-specific biological research from SeaLifeBase [@Palomares20
 
 The analysis workflow involved:
 
-1.  **Data preparation**: Transforming coordinate reference systems to match spatial extents and resolutions across all datasets. This will alllow us to conduct zonal statistics between them and plot them on a map together.
-2.  **Temperature processing**: Calculating mean sea surface temperature (SST) (2008-2012) and converting from Kelvin to Celsius. This ensures we have a robust SST informed by the historical temperatures of the area and is in a temperature people are familar with. 
+1.  **Data preparation**: Transforming coordinate reference systems to match spatial extents and resolutions across all datasets. This will allow us to conduct zonal statistics between them and plot them on a map together.
+2.  **Temperature processing**: Calculating mean sea surface temperature (SST) (2008-2012) and converting from Kelvin to Celsius. This ensures we have a robust SST informed by the historical temperatures of the area and is in a temperature people are familiar with. 
 3.  **Finding suitable areas**: Reclassifying temperature and depth rasters to identify suitable areas (binary: suitable = 1, unsuitable = 0). This returns a raster that only meets our suitability condition.
 4.  **Area calculation**: Calculating suitable area (km²) within each EEZ region using zonal statistics. This allows us to quantify how suitable each EEZ is based on area of suitability. 
 5. **Create Function**: Creating a function that takes in minimum sea surface temperature,  maximum sea surface temperature, minimum sea depth, maximum sea depth, and species name to create a map that colors each exclusive economic zone on the US west coast by suitable area quantity in km^2. This makes the workflow generalizable.
@@ -256,7 +256,7 @@ This spatial analysis maps potential aquaculture EEZs for Oyster and California 
 
 ### Limitations
 
-The followint limitation should be considered:
+The following limitation should be considered:
 
 1.  **Simplified environmental criteria**: This analysis only considers temperature and depth. Additional factors should be considered in order to find more accurate optimal zones.
 
